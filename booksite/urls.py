@@ -11,9 +11,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
     path('book/', include('bookapp.urls')),
-    path('chat/', include('base.urls')),
-    path('news/', include('news_api.urls')),
-    path('music/', include('music.urls')),
+    path('chat/', include('base.urls'),name="chat"),
+    path('news/', include('news_api.urls'),name="news"),
+    path('music/', include('music.urls'),name="music"),
 
 
 ]
