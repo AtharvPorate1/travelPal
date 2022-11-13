@@ -2,6 +2,7 @@ from django.shortcuts import render
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from django.http import HttpResponse
+import requests
 # request.POST.get('uri')
 # Create your views here.
 def index(request):
@@ -17,4 +18,6 @@ def index(request):
 
     # def options(request):
     #     self.
+
+
 
