@@ -8,7 +8,7 @@ import requests
 def index(request):
     if request.method=='POST':
         artist_uri = request.POST.get('uri')
-        spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='5f95e5320f634e4eb9135054fa9f86aa',client_secret='30c35d01e8c3402082494cedfea85857',))
+        spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='enter your client id',client_secret='enter your client secret',))
         results = spotify.artist_top_tracks(artist_uri)
         final_result=results['tracks']
         return render(request,'music/hello.html',{"results":final_result})
